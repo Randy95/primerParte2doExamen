@@ -27,6 +27,7 @@ public class Controlador_FRM_Migracion implements ActionListener {
         
         if(e.getActionCommand().equalsIgnoreCase("Registrar")) {
             metodosCitas.agregar(frm_Migracion.devolverInformacion());
+            JOptionPane.showMessageDialog(null,"Se agregó la cita con éxito");
             frm_Migracion.mostrarLista(metodosCitas.devolverLista()); 
             frm_Migracion.resetearGUI();
         }
@@ -46,12 +47,14 @@ public class Controlador_FRM_Migracion implements ActionListener {
         if(e.getActionCommand().equalsIgnoreCase("Modificar"))
         {
           metodosCitas.modificar(frm_Migracion.devolverInformacion());
+          JOptionPane.showMessageDialog(null,"Se modificó la información de la cita con éxito");
           frm_Migracion.mostrarLista(metodosCitas.devolverLista());
           frm_Migracion.resetearGUI();
         }
         if(e.getActionCommand().equalsIgnoreCase("Cancelar"))
         {
           metodosCitas.eliminar(frm_Migracion.devolverInformacion());
+          JOptionPane.showMessageDialog(null,"Se eliminó la cita satisfactoriamente");
           frm_Migracion.mostrarLista(metodosCitas.devolverLista());
            frm_Migracion.resetearGUI();
         }
@@ -88,11 +91,13 @@ public class Controlador_FRM_Migracion implements ActionListener {
     {
       if(!metodosCitas.consultar(frm_Migracion.devolverCedula()))
       {
+         JOptionPane.showMessageDialog(null,"La cédula no está registrada.\n Puede usarla para registrar una nueva cita");
          frm_Migracion.habilitarCampos();
          frm_Migracion.activarRegistrar();
       }
       else
       {
+         JOptionPane.showMessageDialog(null,"La cédula está registrada se mostrará la información de la cita");
          frm_Migracion.mostrarInformacion(metodosCitas.getArreglo());
          frm_Migracion.activarEdicion();
          frm_Migracion.habilitarCampos();
