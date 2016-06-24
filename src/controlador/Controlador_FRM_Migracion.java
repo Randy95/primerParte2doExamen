@@ -11,10 +11,7 @@ import javax.swing.JOptionPane;
 import modelo.MetodosCitas;
 import vista.FRM_Migracion;
 
-/**
- *
- * @author Carlos
- */
+
 public class Controlador_FRM_Migracion implements ActionListener {
     
     MetodosCitas metodosCitas;
