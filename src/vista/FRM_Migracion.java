@@ -86,7 +86,7 @@ public class FRM_Migracion extends javax.swing.JFrame {
       return jt_Cedula.getText();
     }
     public void mostrarLista(String lista) {
-        
+        activarReportes();
         this.jta_Lista.setText("");
         this.jta_Lista.setText(lista);
     }
@@ -103,6 +103,22 @@ public class FRM_Migracion extends javax.swing.JFrame {
       this.jt_Fecha.setEnabled(true);
       this.jrb_7600.setEnabled(true);
       this.jrb_Normal.setEnabled(true);
+    }
+    public void activarReportes()
+    {
+      this.btn_Cantidad.setEnabled(true);
+      this.btn_Cola.setEnabled(true);
+      this.btn_Promedio.setEnabled(true);
+      this.btn_Mayor_Menor.setEnabled(true);
+      this.btn_Menor_Mayor.setEnabled(true);
+    }
+    public void desactivarReportes()
+    {
+      this.btn_Cantidad.setEnabled(false);
+      this.btn_Cola.setEnabled(false);
+      this.btn_Promedio.setEnabled(false);
+      this.btn_Mayor_Menor.setEnabled(false);
+      this.btn_Menor_Mayor.setEnabled(false);
     }
     public void deshabilitarCampos()
     {

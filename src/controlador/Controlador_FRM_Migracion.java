@@ -34,10 +34,13 @@ public class Controlador_FRM_Migracion implements ActionListener {
             if(metodosCitas.devolverInfoPrimero()!=null) {
                 frm_Migracion.mostrarAtencionCliente(metodosCitas.devolverInfoPrimero());
                 metodosCitas.eliminarPrimero();
+                frm_Migracion.mostrarLista(metodosCitas.devolverLista());
             }
             else {
                 frm_Migracion.resetearAtendiendo();
                 JOptionPane.showMessageDialog(null,"No existen clientes en espera");
+                frm_Migracion.desactivarReportes();
+                frm_Migracion.mostrarLista(metodosCitas.devolverLista());
             }
         }
         if(e.getActionCommand().equalsIgnoreCase("Modificar"))

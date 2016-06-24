@@ -21,8 +21,8 @@ public class MetodosCitas {
         
         while(auxiliar!=null) {
             
-            valores+=primero.getCedula()+"\n"+primero.getNombre()+"\n"+primero.getEdad()+"\n"+
-                        primero.getPrioridad()+"\n"+primero.getFecha()+"\n\n";
+            valores+=auxiliar.getCedula()+"\n"+auxiliar.getNombre()+"\n"+auxiliar.getEdad()+"\n"+
+                        auxiliar.getPrioridad()+"\n"+auxiliar.getFecha()+"\n\n";
             
             auxiliar=auxiliar.getSiguiente();
         }
